@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 import 'signin_screen.dart';
 
-class GuestSignUpScreen extends StatelessWidget {
-  const GuestSignUpScreen({super.key});
+class SignUpWithPhoneNumber extends StatelessWidget {
+  const SignUpWithPhoneNumber({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class GuestSignUpScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 200, left: 55, right: 20),
               child: Text(
-                '''Guest Login''',
+                '''Let's get started''',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
@@ -72,7 +72,9 @@ class GuestSignUpScreen extends StatelessWidget {
               height: 50,
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => SignUpScreen());
+                },
                 child: Text('Continue'),
               ),
             ),

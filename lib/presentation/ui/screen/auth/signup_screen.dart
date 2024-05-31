@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import 'signin_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -9,96 +6,80 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Padding(
-          padding: EdgeInsets.all(16),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 200, left: 55, right: 20),
-              child: Text(
-                '''Let's get started''',
-                style: Theme.of(context).textTheme.titleLarge,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 200, left: 55, right: 20),
+                child: Text(
+                  'Create Account',
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
               ),
-            ),
-            SizedBox(
-              height: 35,
-            ),
-            Text(
-              'Mobile Number',
-              style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                Expanded(
-                    flex: 30,
-                    child: Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade300),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            '+880',
-                            style: Theme.of(context).textTheme.titleMedium,
-                          )
-                        ],
-                      ),
-                    )),
-                SizedBox(
-                  width: 5,
-                ),
-                Expanded(
-                  flex: 70,
-                  child: TextFormField(
-                    decoration: (InputDecoration()),
-                  ),
-                )
-              ],
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            SizedBox(
-              height: 50,
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text('Continue'),
+              SizedBox(
+                height: 35,
               ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Already have an account?',
-                  style: Theme.of(context).textTheme.titleSmall,
+              TextFormField(
+                keyboardType: TextInputType.text,
+                textInputAction: TextInputAction.next,
+                decoration: (InputDecoration(
+                    hintText: 'Enter your first name',
+                    labelText: 'First Name')),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TextFormField(
+                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.text,
+                obscureText: false,
+                decoration: (InputDecoration(
+                  hintText: 'Enter your last name',
+                  labelText: 'Last Name',
+                )),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TextFormField(
+                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.text,
+                obscureText: false,
+                decoration: (InputDecoration(
+                  hintText: 'Enter your email',
+                  labelText: 'Email',
+                )),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TextFormField(
+                textInputAction: TextInputAction.done,
+                keyboardType: TextInputType.text,
+                obscureText: false,
+                decoration: (InputDecoration(
+                  suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                  hintText: 'Enter your password',
+                  labelText: 'Password',
+                )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: 50,
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Sign Up'),
                 ),
-                SizedBox(
-                  width: 4,
-                ),
-                TextButton(
-                    onPressed: () {
-                      Get.to(() => SignInScreen());
-                    },
-                    child: Text(
-                      'Login',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ))
-              ],
-            ),
-          ])),
-    ));
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

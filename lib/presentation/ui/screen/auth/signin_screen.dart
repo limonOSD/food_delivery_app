@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/presentation/ui/screen/auth/guest_signUp_screen.dart';
-import 'package:food_delivery_app/presentation/ui/screen/auth/signup_screen.dart';
+import 'package:food_delivery_app/presentation/ui/screen/auth/signup_with_phone_number_screen.dart';
 import 'package:food_delivery_app/presentation/ui/utility/app_colors.dart';
 import 'package:get/get.dart';
 
@@ -29,7 +29,7 @@ class SignInScreen extends StatelessWidget {
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.next,
                 decoration: (InputDecoration(
-                    hintText: 'Enter your email...', labelText: 'email')),
+                    hintText: 'Enter your email...', labelText: 'Email')),
               ),
               SizedBox(
                 height: 15,
@@ -98,7 +98,7 @@ class SignInScreen extends StatelessWidget {
                   ),
                   TextButton(
                       onPressed: () {
-                        Get.to(() => SignUpScreen());
+                        Get.to(() => SignUpWithPhoneNumber());
                       },
                       child: Text(
                         'sign Up',
