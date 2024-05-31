@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/presentation/ui/screen/auth/guest_signUp_screen.dart';
 import 'package:food_delivery_app/presentation/ui/screen/auth/signup_screen.dart';
 import 'package:food_delivery_app/presentation/ui/utility/app_colors.dart';
 import 'package:get/get.dart';
@@ -122,7 +123,9 @@ class SignInScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       side: BorderSide(color: AppColors.primaryColor)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => GuestSignUpScreen());
+                  },
                   child: Text(
                     'Login As Guest',
                     style:
