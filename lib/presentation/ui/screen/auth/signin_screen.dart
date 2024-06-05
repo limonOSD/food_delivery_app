@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/presentation/ui/screen/auth/guest_signUp_screen.dart';
 import 'package:food_delivery_app/presentation/ui/screen/auth/signup_with_phone_number_screen.dart';
+import 'package:food_delivery_app/presentation/ui/screen/profile_screen.dart';
 import 'package:food_delivery_app/presentation/ui/utility/app_colors.dart';
 import 'package:get/get.dart';
 
@@ -48,7 +49,7 @@ class SignInScreen extends StatelessWidget {
                 children: [
                   Container(
                     height: 20,
-                    width: 20,
+                    width: 15,
                     margin: EdgeInsets.all(15),
                     child: Icon(
                       Icons.ramp_right,
@@ -79,7 +80,9 @@ class SignInScreen extends StatelessWidget {
                 height: 50,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => ProfileScreen());
+                  },
                   child: Text('Login'),
                 ),
               ),

@@ -47,6 +47,7 @@ class GuestSignUpScreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          Text(''),
                           Text(
                             '+880',
                             style: Theme.of(context).textTheme.titleMedium,

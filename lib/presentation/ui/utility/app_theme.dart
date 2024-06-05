@@ -3,6 +3,7 @@ import 'package:food_delivery_app/presentation/ui/utility/app_colors.dart';
 
 class AppThemeData {
   static ThemeData lightThemeData = ThemeData(
+    useMaterial3: true,
     inputDecorationTheme: InputDecorationTheme(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
@@ -43,7 +44,7 @@ class AppThemeData {
         foregroundColor: Colors.white,
         elevation: 3,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(30),
         ),
       ),
     ),
