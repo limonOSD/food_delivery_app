@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/presentation/ui/utility/assets_path.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -34,7 +33,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   clipBehavior: Clip.hardEdge,
                   child: CircleAvatar(
                     maxRadius: 70,
-                    backgroundImage: AssetImage(AppImage.profileImage),
+                    child: Icon(
+                      Icons.person,
+                      size: 100,
+                    ),
+                    // backgroundImage: AssetImage(AppImage.profileImage),
                   ),
                 ),
               ),
@@ -119,16 +122,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  AppBar get profile_appbar_section {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      title: Text(
-        'My  Profile',
-        style: Theme.of(context)
-            .textTheme
-            .titleMedium!
-            .copyWith(color: Colors.black, fontSize: 18),
-      ),
-    );
-  }
+//   AppBar get profile_appbar_section {
+//     return AppBar(
+//       automaticallyImplyLeading: false,
+//       title: Text(
+//         'My  Profile',
+//         style: Theme.of(context)
+//             .textTheme
+//             .titleMedium!
+//             .copyWith(color: Colors.black, fontSize: 18),
+//       ),
+//     );
+//   }
 }
